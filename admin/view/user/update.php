@@ -1,111 +1,108 @@
-<div class="container-fluid">
+<main class="bg_gray">
+			<div class="container margin_60_35 add_bottom_30">
+				<div class="main_title">
+					<h2>Giới thiệu về Allaia</h2>
+					<p>Đây là cửa hàng bán hàng, nơi mọi người đều được chào đón mà không kể đến tuổi tác, giới tính hay địa vị xã hội. Chúng tôi tôn trọng và đánh giá cao sự đa dạng của quan điểm.</p>
+				</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="col-lg-5">
+						<div class="box_about">
+							<h2>Sản phẩm hàng đầu</h2>
+							<p class="lead">Cố gắng tìm hiểu và hiểu rõ, với sự thông minh và sâu sắc.Chúng tôi cam kết mang đến sự đa dạng và chất lượng hàng đầu. </p>
+							<p>Thông qua sự tận tâm của chúng tôi. Và để tránh những phiền toái không cần thiết. Chúng tôi đề xuất một định nghĩa rõ ràng, và chúng tôi muốn thực hiện điều đó. Không có gì là không thể giải quyết, không cần phải nghe, chỉ cần đáng tin cậy. Bằng cách lắng nghe kỹ lưỡng, chúng tôi có thể hiểu rõ hơn. Với sự quyết tâm và sự sẵn lòng, chúng tôi có thể đạt được mục tiêu lớn. Mọi cuộc chơi và mọi thứ, đều là thật và chân thành.</p>
+							<img src="<?=BASE_URL?>/assets/client/img/arrow_about.png" alt="" class="arrow_1">
+						</div>
+					</div>
+					<div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
+							<img src="<?=BASE_URL?>/assets/client/img/about_1.svg" alt="" class="img-fluid" width="350" height="268">
+					</div>
+				</div>
+				<!-- /row -->
+				<div class="row justify-content-center align-items-center">
+					<div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
+							<img src="<?=BASE_URL?>/assets/client/img/about_2.svg" alt="" class="img-fluid" width="350" height="268">
+					</div>
+					<div class="col-lg-5">
+						<div class="box_about">
+							<h2>Các Thương Hiệu Hàng Đầu</h2>
+							<p class="lead">Cố gắng tìm hiểu và hiểu rõ, với sự thông minh và sâu sắc.</p>
+							<p>Qua sự tận tâm của chúng tôi. Và để tránh những phiền toái không cần thiết. Chúng tôi muốn đề xuất một định nghĩa rõ ràng. Không có gì là không thể giải quyết, không cần phải nghe, chỉ cần đáng tin cậy. Bằng cách lắng nghe kỹ lưỡng, chúng tôi có thể hiểu rõ hơn. Với sự quyết tâm và lòng nhiệt thành của chúng tôi. Mọi thứ, từ trò chơi đến mọi thứ khác, đều thật sự và chân thành.</p>
+							<img src="img/arrow_about.png" alt="" class="arrow_2">
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+				<div class="row justify-content-center align-items-center ">
+					<div class="col-lg-5">
+						<div class="box_about">
+							<h2>+5000 sản phẩm</h2>
+							<p class="lead">Điều quan trọng là tìm hiểu và hiểu được, với sự thông minh và sâu sắc.</p>
+							<p>Qua sự đam mê của chúng tôi. Và để tránh những phiền toái không cần thiết. Chúng tôi muốn đề xuất một định nghĩa rõ ràng. Không có gì là không thể giải quyết, không cần phải nghe, chỉ cần đáng tin cậy. Bằng cách lắng nghe kỹ lưỡng, chúng tôi có thể hiểu rõ hơn. Với sự quyết tâm và lòng nhiệt thành của chúng tôi. Mọi thứ, từ trò chơi đến mọi thứ khác, đều là thật và chân thành.</p>
+						</div>
 
-    <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800"><?= $title ?></h1>
-
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Update</h6>
-        </div>
-        <div class="card-body">
-
-
-    <!-- thông báo thành công -->
-            <?php if (isset($_SESSION['success'])) : ?>
-
-
-                <div class="alert alert-success">
-                   <?= $_SESSION['success'] ?>
-                </div>
-
-                 <?php unset($_SESSION['success']) ?>
-
-            <?php endif; ?>
-   <!-- validate -->
-            
-            
-                <?php if (isset($_SESSION['errors'])) : ?>
-
-                    <div class="alert alert-danger">
-                        <ul>
-
-                            <?php foreach ($_SESSION['errors'] as $error) : ?>
-
-                                <li><?= $error ?></li>
-
-                            <?php endforeach; ?>
-                        </ul>
-
-                    </div>
-
-                    <?php unset($_SESSION['errors']) ?>
-                 <?php endif; ?>
-
-                <form class="user" method="post" enctype="multipart/form-data">
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3 mt-3">
-                                <label for="ho_ten" class="form-label">Họ và tên:</label>
-                                <input type="text" class="form-control" value="<?= $users['ho_ten'] ?>" id="ho_ten" placeholder="Họ và tên" name="ho_ten">
-                            </div>
-                            <div class="mb-3 mt-3">
-                                <label for="user" class="form-label">User:</label>
-                                <input type="text" class="form-control" value="<?= $users['user'] ?>" id="user" placeholder="User(tên đăng nhập)" name="user">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-3 mt-3">
-                                <label for="email" class="form-label">Email:</label>
-                                <input type="email" class="form-control" value="<?= $users['email'] ?>" id="email" placeholder=" Email" name="email">
-                            </div>
-                            <div class="mb-3 mt-3">
-                                <label for="mat_khau" class="form-label">Mật khẩu:</label>
-                                <input type="text" class="form-control" value="<?= $users['mat_khau'] ?>" id="mat_khau" placeholder="Mật khẩu" name="mat_khau">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="mb-3 mt-3">
-                                <label for="diachi" class="form-label">Địa chỉ:</label>
-                                <input type="text" class="form-control" value="<?= $users['diachi'] ?>" id="diachi" placeholder="Địa chỉ" name="diachi">
-                            </div>
-                            <div class="mb-3 mt-3">
-                                <label for="dienthoai" class="form-label">Số điện thoại:</label>
-                                <input type="tel" class="form-control" value="<?= $users['dienthoai'] ?>" id="dienthoai" placeholder="Số điện thoại" name="dienthoai">
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="mb-3 mt-3">
-                                <label for="vai_tro" class="form-label">Vai trò:</label>
-                                <select class="form-control" id="vai_tro" name="vai_tro">
-                                    <option <?= $users['vai_tro'] == 1 ? 'selected' : null ?> value="1">Admin</option>
-                                    <option <?= $users['vai_tro'] == 0 ? 'selected' : null ?> value="0">Member</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3 mt-3">
-                                <p>Avatar:</p>
-                                <div class="custom-file mb-3">
-                                    <input type="file" class="custom-file-input" id="hinh" name="hinh">
-                                    <label name="hinh" class="custom-file-label" for="customFile">Choose file</label>
-                                   
-                                </div>
-                                <img src="<?= BASE_URL . $users['hinh'] ?>" width="100px" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <input type="hidden" name="hinh" <?=$users['hinh'] ?>>
-                                <input type="hidden" name="id" id="id">
-
-                    <button type="submit" class="btn btn-info">Cập nhật</button>
-                    <a href="<?= BASE_URL_ADMIN ?>/?act=users" class="btn btn-danger">Back to list</a>
-                </form>
-
-            </div>
-        </div>
-    </div>
+					</div>
+					<div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
+							<img src="<?=BASE_URL?>/assets/client/img/about_3.svg" alt="" class="img-fluid" width="350" height="316">
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		
+			<div class="bg_white">
+				<div class="container margin_60_35">
+					<div class="main_title">
+						<h2>Tại sao chọn Allaia</h2>
+						<p>Khi sự hiểu biết của các công dân trở nên hiệu quả trong việc ngăn chặn sự xâm phạm.</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<div class="box_feat">
+								<i class="ti-medall-alt"></i>
+								<h3>+1000 Khách hàng</h3>
+								<p>Đây là cách tôi miêu tả, không có gì làm chậm trễ điều quan trọng nhất. Sức mạnh của bạn khi nghe là tôi hiểu được, không có lựa chọn khác, đối với tôi là điều quan trọng nhất.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="box_feat">
+								<i class="ti-help-alt"></i>
+								<h3>Hỗi trợ 24/24</h3>
+								<p>Đây là những gì tôi mô tả trên trang web bán hàng, không có gì làm trở ngại điều quan trọng nhất. Sức mạnh của bạn khi nghe là tôi hiểu, không có sự lựa chọn thay thế, với tôi là điều quan trọng nhất.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="box_feat">
+								<i class="ti-gift"></i>
+								<h3>Các chương trình khuyến mãi tốt nhất</h3>
+								<p>Đây là những gì tôi mô tả trên trang web bán hàng, không có gì làm trở ngại điều quan trọng nhất. Sức mạnh của bạn khi nghe là tôi hiểu, không có sự lựa chọn thay thế, với tôi là điều quan trọng nhất.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="box_feat">
+								<i class="ti-headphone-alt"></i>
+								<h3>Đường dây trực tiếp hỗ trợ</h3>
+								<p>Đây là những gì tôi mô tả trên trang web bán hàng, không có gì làm trở ngại điều quan trọng nhất. Sức mạnh của bạn khi nghe là tôi hiểu, không có sự lựa chọn thay thế, với tôi là điều quan trọng nhất. </p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="box_feat">
+								<i class="ti-wallet"></i>
+								<h3>Thanh toán an toàn</h3>
+								<p>Đây là những gì tôi mô tả trên trang web bán hàng, không có gì làm trở ngại điều quan trọng nhất. Sức mạnh của bạn khi nghe là tôi hiểu, không có sự lựa chọn thay thế, với tôi là điều quan trọng nhất.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="box_feat">
+								<i class="ti-comments"></i>
+								<h3>Hỗ trợ qua Trò chuyện</h3>
+								<p>Đây là những gì tôi mô tả trên trang web bán hàng, không có gì làm trở ngại điều quan trọng nhất. Sức mạnh của bạn khi nghe là tôi hiểu, không có sự lựa chọn thay thế, với tôi là điều quan trọng nhất. </p>
+							</div>
+						</div>
+					</div>
+					<!--/row-->
+				</div>
+			</div>
+			<!-- /bg_white -->
+		
+		<!-- /container -->
+	</main>
