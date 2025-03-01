@@ -105,3 +105,20 @@ function cartDec($productID)
     }
     header('Location: ' . BASE_URL . '?act=cart-list');
 }
+
+function cartDelete($productID)
+{
+    // Kiểm tra xem là có product với cái ID kia không
+    $product = showOne('sanpham', $productID);
+    if (empty($product)) {
+        debug('404 Not found');
+    }
+
+    if (isset($_SESSION['cart'][$productID])) {
+        unset($_SESSION['cart'][$productID]);
+
+        deleteCartIteamsAndProductID($_SESSION['cartID'], $productID);
+    }
+
+    header('Location: ' . BASE_URL . '?act=cart-list');
+}
