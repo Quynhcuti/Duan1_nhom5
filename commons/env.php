@@ -11,8 +11,8 @@ define('PATH_VIEW_ADMIN',         __DIR__ . '/../admin/views/');
 
 define('PATH_UPLOAD',         __DIR__ . '/../');
 
-define('BASE_URL',          'http://localhost/duan1_nhom9/');
-define('BASE_URL_ADMIN',    'http://localhost/duan1_nhom9/admin/');
+define('BASE_URL',          'http://dua1.test/');
+define('BASE_URL_ADMIN',    'http://dua1.test/admin/');
 
 define('DB_HOST',       'localhost');
 define('DB_PORT',       '3306');
