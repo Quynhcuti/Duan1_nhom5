@@ -71,3 +71,37 @@ function cartList()
     //  debug($_SESSION['cart']);
     require_once PATH_VIEW . 'layouts/client.php';
 }
+
+function cartInc($productID)
+{
+    // Kiểm tra xem là có product với cái ID kia không
+    $product = showOne('sanpham', $productID);
+
+    if (empty($product)) {
+        debug('404 Not found');
+    }
+
+    if (isset($_SESSION['cart'][$productID])) {
+
+        $qtyTMP = $_SESSION['cart'][$productID]['mausize']['quantity'] += 1;
+        updateQuantityByCartIDAndProductID($_SESSION['cartID'], $productID, $qtyTMP);
+    }
+    header('Location: ' . BASE_URL . '?act=cart-list');
+}
+
+
+function cartDec($productID)
+{
+    // Kiểm tra xem là có product với cái ID kia không
+    $product = showOne('sanpham', $productID);
+
+    if (empty($product)) {
+        debug('404 Not found');
+    }
+    if (isset($_SESSION['cart'][$productID]) && $_SESSION['cart'][$productID]['quantity'] >  1) {
+
+        $qtyTMP = $_SESSION['cart'][$productID]['quantity'] -= 1;
+        updateQuantityByCartIDAndProductID($_SESSION['cartID'], $productID, $qtyTMP);
+    }
+    header('Location: ' . BASE_URL . '?act=cart-list');
+}
