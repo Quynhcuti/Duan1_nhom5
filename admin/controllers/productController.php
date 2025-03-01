@@ -1,5 +1,19 @@
 <?php
-
+function productListAll()
+{
+    $title = 'Danh Sách Sản Phẩm';
+    $view = 'products/index';
+    $script = 'datatable';
+    $style = 'datatable';
+    $style2 = 'style';
+    $category = listAll('loai');
+    $products = listAll('sanpham');
+    $productsColors = listAll('mauhh');
+    $productsSizes = listAll('sizehh');
+    $products = movearray($products, $productsColors, $productsSizes);
+    $products = productConvert($products);
+    require_once PATH_VIEW_ADMIN . 'layouts/master.php';
+}
 
 function productCreate()
 {
