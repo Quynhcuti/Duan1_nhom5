@@ -48,10 +48,7 @@ match ($act) {
     'category-update' => categoryUpdate($cate),
     'category-delete' => categoryDelete($cate),
 
-    //CRUD Comment
-    'comment'        => comment(),
-    'comment-detail' => commentShowOne($_GET['id']),
-    'delete-comment' => commentDelete($_GET['id'],$_GET['idhh']),
+    
 
     //CRUD Mã giảm giá
     // 'voucher'        => voucherListAll(),
