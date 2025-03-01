@@ -10,17 +10,17 @@
 							<h2>Sản phẩm hàng đầu</h2>
 							<p class="lead">Cố gắng tìm hiểu và hiểu rõ, với sự thông minh và sâu sắc.Chúng tôi cam kết mang đến sự đa dạng và chất lượng hàng đầu. </p>
 							<p>Thông qua sự tận tâm của chúng tôi. Và để tránh những phiền toái không cần thiết. Chúng tôi đề xuất một định nghĩa rõ ràng, và chúng tôi muốn thực hiện điều đó. Không có gì là không thể giải quyết, không cần phải nghe, chỉ cần đáng tin cậy. Bằng cách lắng nghe kỹ lưỡng, chúng tôi có thể hiểu rõ hơn. Với sự quyết tâm và sự sẵn lòng, chúng tôi có thể đạt được mục tiêu lớn. Mọi cuộc chơi và mọi thứ, đều là thật và chân thành.</p>
-							
+							<img src="<?=BASE_URL?>/assets/client/img/arrow_about.png" alt="" class="arrow_1">
 						</div>
 					</div>
 					<div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
-							
+							<img src="<?=BASE_URL?>/assets/client/img/about_1.svg" alt="" class="img-fluid" width="350" height="268">
 					</div>
 				</div>
 				<!-- /row -->
 				<div class="row justify-content-center align-items-center">
 					<div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
-							
+							<img src="<?=BASE_URL?>/assets/client/img/about_2.svg" alt="" class="img-fluid" width="350" height="268">
 					</div>
 					<div class="col-lg-5">
 						<div class="box_about">
@@ -42,7 +42,7 @@
 
 					</div>
 					<div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
-							
+							<img src="<?=BASE_URL?>/assets/client/img/about_3.svg" alt="" class="img-fluid" width="350" height="316">
 					</div>
 				</div>
 				<!-- /row -->
