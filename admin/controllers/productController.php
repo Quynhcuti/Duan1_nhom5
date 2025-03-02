@@ -17,6 +17,7 @@ function productListAll()
 
 function productCreate()
 {
+    //Xóa session thông báo cũ
     unset( $_SESSION['success']);
     $title = 'Thêm Mới Sản Phẩm';
     $view = 'products/add';
@@ -67,7 +68,7 @@ function productCreate()
         //end validate
 
         insert('sanpham', $data);
-        //         //xử lý biến thể
+     //xử lý biến thể
         $lastID = lastID('sanpham');
         for ($i = 1; $i <= $soluong; $i++) {
             $data = [
