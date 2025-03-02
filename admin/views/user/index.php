@@ -61,7 +61,6 @@
 
                                 <td>
                                     <a class="btn btn-info mt-1" href="<?= BASE_URL_ADMIN ?>?act=users-detail&id=<?= $user['id'] ?>">Xem chi tiết</a>
-                                    <a class="btn btn-warning mt-1" href="<?= BASE_URL_ADMIN ?>?act=users-update&id=<?= $user['id'] ?>">Cập nhật</a>
                                     <?php if (isset($_SESSION['user']) && $_SESSION['user']['id'] != $user['id']) { ?>
                                         <a class="btn btn-danger mt-1" href="<?= BASE_URL_ADMIN ?>?act=users-delete&id=<?= $user['id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xóa</a>
                                     <?php } ?>

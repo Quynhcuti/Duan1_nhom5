@@ -65,12 +65,7 @@
 									<span class="checkmark"></span>
 								</label>
 							</li>
-							<li>
-								<label class="container_radio">Thanh toán qua VNPAY<a href="#0" class="info" data-bs-toggle="modal" data-bs-target="#status_payments_method"></a>
-									<input type="radio" value="1" name="status_payment">
-									<span class="checkmark"></span>
-								</label>
-							</li>
+							
 						</ul>
 						<!-- <div class="payment_info d-none d-sm-block">
 							<figure><img src="img/cards_all.svg" alt=""></figure>

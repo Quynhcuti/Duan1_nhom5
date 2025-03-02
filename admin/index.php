@@ -48,10 +48,7 @@ match ($act) {
     'category-update' => categoryUpdate($cate),
     'category-delete' => categoryDelete($cate),
 
-    //CRUD Comment
-    'comment'        => comment(),
-    'comment-detail' => commentShowOne($_GET['id']),
-    'delete-comment' => commentDelete($_GET['id'],$_GET['idhh']),
+ 
 
     //CRUD Mã giảm giá
     // 'voucher'        => voucherListAll(),
@@ -62,7 +59,7 @@ match ($act) {
 };
 require_once '../commons/disconnect-db.php';
 }else{
-    header('Location:http://localhost/duan1_nhom9/');
+    header('Location:http://duan1_nhom5.test/');
     // echo "404 - Not found";
     // die;
 }
